@@ -1,0 +1,34 @@
+{
+  "name": "npm-package-versions",
+  "version": "0.0.0",
+  "description": "Get an array of all available versions of a given npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watson/npm-package-versions.git"
+  },
+  "keywords": [
+    "npm",
+    "version",
+    "versions",
+    "api"
+  ],
+  "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watson/npm-package-versions/issues"
+  },
+  "homepage": "https://github.com/watson/npm-package-versions#readme",
+  "devDependencies": {
+    "semver": "^5.1.0",
+    "standard": "^7.1.2",
+    "tape": "^4.5.1"
+  },
+  "dependencies": {
+    "npm-registry-client": "^7.1.2",
+    "npmlog": "^3.1.2"
+  }
+}
