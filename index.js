@@ -9,7 +9,9 @@ fetch.params = {}
 
 var client = new RegClient({ log: log })
 
-module.exports = function fetch (name, cb) {
+module.exports = fetch
+
+function fetch (name, cb) {
   client.get(fetch.uri + name, fetch.params, function (err, data) {
     if (err) return cb(err)
     cb(null, Object.keys(data.versions))
