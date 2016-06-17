@@ -1,6 +1,6 @@
 {
   "name": "npm-package-versions",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get an array of all available versions of a given npm package",
   "main": "index.js",
   "scripts": {
@@ -30,5 +30,9 @@
   "dependencies": {
     "npm-registry-client": "^7.1.2",
     "npmlog": "^3.1.2"
-  }
+  },
+  "coordinates": [
+    37.7609713,
+    -122.4344226
+  ]
 }
