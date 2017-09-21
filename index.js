@@ -1,19 +1,22 @@
 'use strict'
 
-var log = require('npmlog')
-var RegClient = require('npm-registry-client')
-
-log.level = 'silent'
-fetch.uri = 'https://registry.npmjs.org/'
-fetch.params = {}
-
-var client = new RegClient({ log: log })
+var https = require('https')
 
 module.exports = fetch
 
 function fetch (name, cb) {
-  client.get(fetch.uri + name, fetch.params, function (err, data) {
-    if (err) return cb(err)
-    cb(null, Object.keys(data.versions))
+  https.get('https://registry.npmjs.org/' + name, function (res) {
+    if (res.statusCode !== 200) {
+      res.destroy()
+      cb(new Error('Registry returned ' + res.statusCode))
+      return
+    }
+
+    var buffers = []
+    res.on('data', buffers.push.bind(buffers))
+    res.on('end', function () {
+      var data = Buffer.concat(buffers)
+      cb(null, Object.keys(JSON.parse(data).versions))
+    })
   })
 }
