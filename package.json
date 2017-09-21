@@ -24,12 +24,12 @@
   "homepage": "https://github.com/watson/npm-package-versions#readme",
   "devDependencies": {
     "semver": "^5.1.0",
-    "standard": "^7.1.2",
+    "standard": "^10.0.3",
     "tape": "^4.5.1"
   },
   "dependencies": {
     "npm-registry-client": "^7.1.2",
-    "npmlog": "^3.1.2"
+    "npmlog": "^4.1.2"
   },
   "coordinates": [
     37.7609713,
