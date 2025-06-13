@@ -10,6 +10,7 @@ module.exports = function fetch (name, registry, cb) {
   }
 
   const get = registry.startsWith('https://') ? https.get : http.get
+  registry = registry.endsWith('/') ? registry.slice(0, -1) : registry
 
   get(`${registry}/${name}`, function (res) {
     if (res.statusCode !== 200) {
