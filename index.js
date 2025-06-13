@@ -7,6 +7,8 @@ module.exports = function fetch (name, registry, cb) {
   if (typeof registry === 'function') {
     cb = registry
     registry = 'https://registry.npmjs.org'
+  } else if (!registry) {
+    registry = 'https://registry.npmjs.org'
   }
 
   const get = registry.startsWith('https://') ? https.get : http.get
