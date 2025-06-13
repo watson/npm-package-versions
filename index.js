@@ -3,12 +3,14 @@
 const http = require('http')
 const https = require('https')
 
+const DEFAULT_REGISTRY = 'https://registry.npmjs.org'
+
 module.exports = function fetch (name, registry, cb) {
   if (typeof registry === 'function') {
     cb = registry
-    registry = 'https://registry.npmjs.org'
+    registry = DEFAULT_REGISTRY
   } else if (!registry) {
-    registry = 'https://registry.npmjs.org'
+    registry = DEFAULT_REGISTRY
   }
 
   const get = registry.startsWith('https://') ? https.get : http.get
