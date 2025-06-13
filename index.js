@@ -1,6 +1,6 @@
 'use strict'
 
-var https = require('https')
+const https = require('https')
 
 module.exports = fetch
 
@@ -12,10 +12,10 @@ function fetch (name, cb) {
       return
     }
 
-    var buffers = []
+    const buffers = []
     res.on('data', buffers.push.bind(buffers))
     res.on('end', function () {
-      var data = Buffer.concat(buffers)
+      const data = Buffer.concat(buffers).toString()
       cb(null, Object.keys(JSON.parse(data).versions))
     })
   })

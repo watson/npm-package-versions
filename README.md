@@ -14,7 +14,7 @@ npm install npm-package-versions --save
 ## Usage
 
 ```js
-var pkgVersions = require('npm-package-versions')
+const pkgVersions = require('npm-package-versions')
 
 pkgVersions('bonjour', function (err, versions) {
   if (err) throw err

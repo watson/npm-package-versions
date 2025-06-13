@@ -1,8 +1,8 @@
 'use strict'
 
-var test = require('tape')
-var semver = require('semver')
-var pkgVersions = require('./')
+const test = require('tape')
+const semver = require('semver')
+const pkgVersions = require('./')
 
 test('exsiting package', function (t) {
   pkgVersions('npm', function (err, versions) {
