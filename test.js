@@ -1,10 +1,10 @@
 'use strict'
 
-const test = require('tape')
+const t = require('tap')
 const semver = require('semver')
 const pkgVersions = require('./')
 
-test('exsiting package', function (t) {
+t.test('exsiting package', function (t) {
   pkgVersions('npm', function (err, versions) {
     t.error(err)
     t.ok(Array.isArray(versions))
@@ -19,7 +19,7 @@ test('exsiting package', function (t) {
   })
 })
 
-test('non-existing package', function (t) {
+t.test('non-existing package', function (t) {
   pkgVersions('npm-package-versions-' + Date.now(), function (err, versions) {
     t.ok(err instanceof Error)
     t.equal(versions, undefined)
