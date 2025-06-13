@@ -7,7 +7,7 @@
     "ci:coverage": "tap --coverage-report=lcovonly --allow-incomplete-coverage test.js",
     "coverage": "tap --coverage-report=html test.js",
     "lint": "standard",
-    "test": "npm run lint && node test.js"
+    "test": "npm run lint && tap test.js"
   },
   "repository": {
     "type": "git",
