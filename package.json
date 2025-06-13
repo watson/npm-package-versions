@@ -4,6 +4,8 @@
   "description": "Get an array of all available versions of a given npm package",
   "main": "index.js",
   "scripts": {
+    "ci:coverage": "tap --coverage-report=lcovonly --allow-incomplete-coverage test.js",
+    "coverage": "tap --coverage-report=html test.js",
     "lint": "standard",
     "test": "npm run lint && node test.js"
   },
