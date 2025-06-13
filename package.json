@@ -24,8 +24,8 @@
   "homepage": "https://github.com/watson/npm-package-versions#readme",
   "dependencies": {},
   "devDependencies": {
-    "semver": "^5.1.0",
-    "standard": "^10.0.3",
+    "semver": "^7.7.2",
+    "standard": "^17.1.2",
     "tap": "^19.2.5"
   },
   "coordinates": [
