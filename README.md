@@ -2,6 +2,8 @@
 
 Get an array of all available versions of a given npm package.
 
+[![npm](https://img.shields.io/npm/v/npm-package-versions.svg)](https://www.npmjs.com/package/npm-package-versions)
+[![codecov](https://codecov.io/gh/watson/npm-package-versions/graph/badge.svg?token=f9A9PFc2EW)](https://codecov.io/gh/watson/npm-package-versions)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 ## Installation
