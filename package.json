@@ -1,6 +1,6 @@
 {
   "name": "npm-package-versions",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Get an array of all available versions of a given npm package",
   "main": "index.js",
   "scripts": {
