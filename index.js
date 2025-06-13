@@ -2,9 +2,7 @@
 
 const https = require('https')
 
-module.exports = fetch
-
-function fetch (name, cb) {
+module.exports = function fetch (name, cb) {
   https.get('https://registry.npmjs.org/' + name, function (res) {
     if (res.statusCode !== 200) {
       res.destroy()
