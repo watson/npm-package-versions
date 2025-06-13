@@ -24,6 +24,14 @@ pkgVersions('bonjour', function (err, versions) {
 })
 ```
 
+Optionally supply a custom registry URL (will default to `https://registry.npmjs.org` if not provided):
+
+```js
+pkgVersions('bonjour', 'https://registry.example.com', function (err, versions) {
+  // ...
+})
+```
+
 ## API
 
 ### `pgkVersions.uri`

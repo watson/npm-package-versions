@@ -1,9 +1,17 @@
 'use strict'
 
+const http = require('http')
 const https = require('https')
 
-module.exports = function fetch (name, cb) {
-  https.get(`https://registry.npmjs.org/${name}`, function (res) {
+module.exports = function fetch (name, registry, cb) {
+  if (typeof registry === 'function') {
+    cb = registry
+    registry = 'https://registry.npmjs.org'
+  }
+
+  const get = registry.startsWith('https://') ? https.get : http.get
+
+  get(`${registry}/${name}`, function (res) {
     if (res.statusCode !== 200) {
       res.destroy()
       cb(new Error(`Registry returned ${res.statusCode}`))
