@@ -4,7 +4,8 @@
   "description": "Get an array of all available versions of a given npm package",
   "main": "index.js",
   "scripts": {
-    "test": "standard && node test.js"
+    "lint": "standard",
+    "test": "npm run lint && node test.js"
   },
   "repository": {
     "type": "git",
